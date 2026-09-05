@@ -1,3 +1,61 @@
-@use "./variables.scss" as *;
+body {
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 18px !important;
+}
 
-// put your custom CSS here!
+.markdown-preview-section blockquote,
+.markdown-preview-section h1,
+.markdown-preview-section h2,
+.markdown-preview-section h3,
+.markdown-preview-section p {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.external-link::after {
+    content: " (external)";
+    font-size: 0.8em;
+    margin-left: 0.2em;
+}
+
+.internal-link.is-unresolved,
+.internal-link:not(.is-unresolved) {
+    text-decoration: none;
+}
+.internal-link.is-unresolved::before {
+    content: "";
+}
+
+blockquote {
+  padding-left: 1.5rem !important;
+  margin-left: 0 !important;
+}
+
+.external::after {
+  display: none !important;
+}
+a.external svg {
+  display: none !important;
+}
+.internal {
+  background: transparent !important;
+}
+
+.explorer {
+  overflow: visible !important;
+}
+
+.explorer.collapsed {
+  flex: 0 0 1.2rem !important;
+}
+
+.toc {
+  overflow: visible !important;
+}
+
+.toc.collapsed {
+  flex: 0 0 1.2rem !important;
+}
